@@ -1,0 +1,224 @@
+$color-primary: #c69963;
+$color-primary-dark: #b28451;
+$color-primary-darker: darken($color-primary, 20);
+$color-secondary: #101d2c;
+$color-secondary-light: #213f61;
+
+.datepicker {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  padding: 2rem;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  .calendar-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    .text {
+      color: $color-secondary;
+      display: flex;
+      flex-direction: column;
+      font-size: 1.5rem;
+      justify-content: center;
+      margin: 1rem;
+      text-align: center;
+    }
+  }
+  .selects {
+    display: flex;
+    height: 35rem;
+    width: 60%;
+  }
+  .roomselect {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    .roomselect-title {
+      color: $color-secondary;
+      font-size: 3rem;
+      margin: 1rem;
+    }
+    .roomselect-options {
+      align-content: center;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .room {
+      margin: 1rem;
+    }
+    .room-price {
+      font-size: 1.5rem;
+    }
+  }
+  // cruise options
+  .cruiseselect {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    .cruise-title {
+      color: $color-secondary;
+      font-size: 3rem;
+      margin: 1rem;
+    }
+    .cruiseselect-options {
+      align-content: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+    .cruiseselect-option {
+      margin: 1rem;
+    }
+    .cruiseselect-free {
+      color: $color-secondary;
+      font-size: 2rem;
+    }
+    .cruiseselect-special {
+      color: $color-primary-darker;
+      font-size: 2rem;
+      margin: 1rem 0;
+    }
+  }
+  .next-button {
+    align-self: flex-end;
+    background-color: $color-secondary;
+    border: none;
+    border-radius: 0.5rem;
+    bottom: 3rem;
+    color: white;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 2rem;
+    height: min-content;
+    outline: none;
+    padding: 1rem;
+    position: absolute;
+    right: 3rem;
+    text-align: center;
+    width: 25rem;
+    &:hover {
+      background-color: lighten($color-secondary, 4);
+    }
+    &:active {
+      transform: translateY(0.2rem);
+    }
+    &:disabled {
+      background-color: #566575;
+      cursor: not-allowed;
+    }
+  }
+  .total {
+    bottom: 3rem;
+    color: $color-secondary;
+    font-size: 2.5rem;
+    left: 3rem;
+    position: absolute;
+  }
+}
+.not_suported {
+  align-items: center;
+  display: none;
+  font-size: 3rem;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}
+///////////////////////////////////////////////////////////////////////
+
+@media (max-width: 650px) {
+  .datepicker {
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1rem;
+    .calendar-container {
+      height: min-content;
+      margin-top: 4rem;
+      width: 100%;
+      .text {
+        margin: 0.5rem;
+      }
+    }
+    .selects {
+      flex-direction: column;
+      width: 100%;
+    }
+    .roomselect {
+      flex-direction: column;
+      width: 100%;
+      .roomselect-title {
+        font-size: 2.2rem;
+        margin: 0.5rem;
+      }
+      .roomselect-options {
+        flex-direction: row;
+        width: 100%;
+      }
+      .room {
+        margin: 0.5rem;
+      }
+    }
+    .cruiseselect {
+      flex-direction: column;
+      width: 100%;
+      .cruise-title {
+        font-size: 2.2rem;
+        margin: 0.5rem;
+      }
+      .cruiseselect-options {
+        flex-direction: row;
+        width: 100%;
+      }
+      .cruiseselect-free {
+        align-items: center;
+        color: $color-secondary;
+        display: flex;
+        font-size: 1.2rem;
+      }
+      .cruiseselect-special {
+        align-items: center;
+        color: $color-primary-darker;
+        display: flex;
+        font-size: 1.2rem;
+        margin: 0.5rem 0;
+      }
+    }
+    .next-button {
+      width: 20rem;
+    }
+  }
+}
+@media (max-height: 450px) {
+  .datepicker {
+    display: none;
+  }
+  .not_suported {
+    display: flex;
+  }
+}
+// css transition animation
+.swap-enter {
+  transform: translateX(100%);
+}
+.swap-enter-active {
+  transform: translateX(0%);
+  transition: transform 900ms ease-in-out;
+}
+.swap-exit {
+  transform: translateX(0%);
+}
+.swap-exit-active {
+  //100
+  transition: transform 900ms ease-in-out;
+  transform: translateX(-100%);
+}
+.swap-exit-done {
+  display: none;
+}

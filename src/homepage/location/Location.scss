@@ -1,0 +1,118 @@
+$color-primary: #c69963;
+$color-primary-dark: #b28451;
+$color-secondary: #101d2c;
+.location {
+  background-color: $color-secondary;
+  display: flex;
+  height: min-content;
+  width: 100%;
+  .location-images {
+    align-content: center;
+    align-items: center;
+    background-color: $color-secondary;
+    column-gap: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    height: 100%;
+    padding: 2rem;
+    row-gap: 2rem;
+    width: 67%;
+    .image-kalemegdan {
+      border-radius: 0.3rem;
+      grid-column: 3/5;
+      grid-row: 4/6;
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+    .image-skadarlija {
+      border-radius: 0.3rem;
+      grid-column: 1/3;
+      grid-row: 4/6;
+      height: 100%;
+      width: 100%;
+    }
+    .image-pobednik {
+      border-radius: 0.3rem;
+      grid-column: 5/6;
+      grid-row: 3/6;
+      height: 100%;
+      width: 100%;
+    }
+    .image-bw {
+      border-radius: 0.3rem;
+      grid-column: 1/4;
+      grid-row: 1/4;
+      height: 100%;
+      width: 100%;
+    }
+    .image-trg {
+      border-radius: 0.3rem;
+      grid-column: 4/6;
+      grid-row: 1/3;
+      height: 100%;
+      width: 100%;
+    }
+    .image-museum {
+      border-radius: 0.3rem;
+      grid-column: 4/5;
+      grid-row: 3/4;
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .quote {
+    background-color: $color-secondary;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    position: relative;
+    width: 33%;
+    .title {
+      color: $color-primary;
+      font-size: 2.5rem;
+      margin: 0.5rem 0;
+    }
+    .line {
+      color: white;
+      font-size: 1.5rem;
+      margin: 0.5rem 0;
+    }
+    .button {
+      background-color: $color-primary-dark;
+      border: none;
+      border-radius: 0.2rem;
+      color: white;
+      cursor: pointer;
+      font-family: "Libre Baskerville", serif;
+      font-size: 1.8rem;
+      height: 5rem;
+      margin: 2rem 0;
+      outline: none;
+      width: 22rem;
+      &:active {
+        transform: translateY(0.2rem);
+      }
+      &:hover {
+        background-color: $color-primary;
+      }
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .location {
+    flex-direction: column;
+    height: min-content;
+    .location-images {
+      padding: 2rem;
+      width: 100%;
+    }
+    .quote {
+      height: min-content;
+      padding: 2rem;
+      width: 100%;
+    }
+  }
+}

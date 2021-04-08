@@ -1,0 +1,105 @@
+$color-primary: #c69963;
+$color-primary-dark: #b28451;
+$color-secondary: #101d2c;
+$color-secondary-light: #213f61;
+.calendar {
+  font-size: 1rem;
+  min-width: 25rem;
+  min-height: 25rem;
+  .react-calendar__tile:enabled:hover,
+  .react-calendar__tile:enabled:focus {
+    background-color: #e6e6e6;
+  }
+  .react-calendar__tile--now {
+    background: $color-secondary-light;
+  }
+  .react-calendar__tile--now:enabled:hover,
+  .react-calendar__tile--now:enabled:focus {
+    background: $color-secondary;
+  }
+  .react-calendar__tile--hasActive {
+    background: #76baff;
+  }
+  .react-calendar__tile--hasActive:enabled:hover,
+  .react-calendar__tile--hasActive:enabled:focus {
+    background: #a9d4ff;
+  }
+  .react-calendar__tile--active {
+    background: #b28451;
+    color: white;
+  }
+  .react-calendar__tile--active:enabled:hover,
+  .react-calendar__tile--active:enabled:focus {
+    background: #c69963;
+  }
+  .react-calendar--selectRange .react-calendar__tile--hover {
+    background-color: #e6e6e6;
+  }
+}
+////////////////////* Customize the label (the container) */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 3.5rem;
+  margin-bottom: 1.2rem;
+  cursor: pointer;
+  font-size: 1.8rem;
+  color: $color-secondary;
+  // -webkit-user-select: none;
+  // -moz-user-select: none;
+  // -ms-user-select: none;
+  // user-select: none;
+  // -webkit-tap-highlight-color: transparent;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: $color-primary-dark;
+  border-radius: 30%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: $color-primary;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: $color-secondary;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+  top: 0.9rem;
+  left: 0.9rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 30%;
+  background: $color-primary;
+}

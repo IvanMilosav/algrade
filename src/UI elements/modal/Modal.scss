@@ -1,0 +1,41 @@
+$color-primary: #c69963;
+$color-primary-dark: #b28451;
+$color-secondary: #101d2c;
+.modal {
+  background-color: white;
+  border: double $color-primary-dark 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  height: 60rem;
+  left: 50%;
+  max-height: 100%;
+  max-width: 95%;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 120rem;
+  z-index: 6;
+  .close {
+    color: $color-secondary;
+    cursor: pointer;
+    font-size: 3rem;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    z-index: 100;
+  }
+}
+@media (max-width: 650px) {
+  .modal {
+    height: 92%;
+    width: 90%;
+    min-height: 50rem;
+  }
+}
+@media (max-width: 320px) {
+  .modal {
+    height: 98%;
+    width: 95%;
+  }
+}

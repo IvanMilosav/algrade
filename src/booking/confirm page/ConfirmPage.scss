@@ -1,0 +1,148 @@
+$color-primary: #c69963;
+$color-primary-dark: #b28451;
+$color-secondary: #101d2c;
+$color-secondary-light: #213f61;
+.confirmpage {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  padding-top: 5rem;
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  .text {
+    color: #101d2c;
+    font-size: 2rem;
+    margin: 2rem;
+    margin-bottom: 4rem;
+    text-align: center;
+    width: 70%;
+  }
+  .info {
+    align-items: center;
+    color: #101d2c;
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    justify-content: center;
+    text-align: left;
+    width: 70%;
+  }
+  .info-data {
+    text-align: left;
+  }
+  .info-name {
+    font-size: 2.2rem;
+    text-transform: capitalize;
+  }
+  .info-email {
+    font-size: 2.2rem;
+  }
+  .info-phone {
+    font-size: 2.2rem;
+  }
+  .image {
+    height: 15rem;
+    left: 50%;
+    position: absolute;
+    top: 1rem;
+    transform: translateX(-50%);
+    width: 15rem;
+  }
+  .next-button {
+    right: 3rem;
+    bottom: 3rem;
+    position: absolute;
+    padding: 1rem;
+    height: min-content;
+    width: 25rem;
+    font-family: inherit;
+    align-self: flex-end;
+    background-color: $color-secondary;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    outline: none;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    &:hover {
+      background-color: lighten($color-secondary, 4);
+    }
+    &:active {
+      transform: translateY(0.2rem);
+    }
+    &:disabled {
+      background-color: #566575;
+      cursor: not-allowed;
+    }
+  }
+  .back-button {
+    left: 3rem;
+    bottom: 3rem;
+    position: absolute;
+    padding: 1rem;
+    height: min-content;
+    width: 25rem;
+    font-family: inherit;
+    align-self: flex-end;
+    background-color: $color-secondary;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    outline: none;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    &:hover {
+      background-color: lighten($color-secondary, 4);
+    }
+    &:active {
+      transform: translateY(0.2rem);
+    }
+  }
+}
+@media (max-width: 650px) {
+  .confirmpage {
+    .next-button {
+      width: 20rem;
+    }
+    .back-button {
+      width: 20rem;
+    }
+  }
+}
+
+@media (max-width: 350px) {
+  .next-button {
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+  .back-button {
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+}
+//// animations
+.swap-enter {
+  transform: translateX(100%);
+}
+.swap-enter-active {
+  transform: translateX(0%);
+  transition: transform 900ms ease-in-out;
+}
+.swap-exit {
+  transform: translateX(0%);
+}
+.swap-exit-active {
+  //100
+  transition: transform 900ms ease-in-out;
+  transform: translateX(-100%);
+}
+.swap-exit-done {
+  display: none;
+}

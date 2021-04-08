@@ -1,0 +1,53 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  // tap highlights removing
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Libre Baskerville", serif;
+}
+body {
+  font-family: "Libre Baskerville", serif;
+}
+@media (max-width: 1024px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (max-width: 600px) {
+  html {
+    font-size: 37.5%;
+  }
+}
+@media (max-height: 600px) and (max-width: 600px) {
+  html {
+    font-size: 30%;
+  }
+}
+@media (min-width: 1920px) {
+  html {
+    font-size: 75%;
+  }
+}
+@media (min-width: 2500px) {
+  html {
+    font-size: 100%;
+  }
+}
+@media (min-width: 3500px) {
+  html {
+    font-size: 150%;
+  }
+}

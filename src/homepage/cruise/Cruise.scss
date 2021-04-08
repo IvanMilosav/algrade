@@ -1,0 +1,59 @@
+$color-primary: #c69963;
+$color-primary-dark: #b28451;
+$color-secondary: #101d2c;
+.cruise {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  .cruise-img {
+    height: 40rem;
+    width: 65rem;
+  }
+  .main_section {
+    max-width: 45rem;
+    .text {
+      color: $color-secondary;
+      font-size: 1.5rem;
+      margin: 2rem;
+    }
+    .title {
+      color: $color-primary-dark;
+      font-size: 2.5rem;
+      margin: 2rem;
+    }
+    .button {
+      background-color: $color-primary-dark;
+      border: none;
+      border-radius: 0.2rem;
+      color: white;
+      cursor: pointer;
+      font-family: "Libre Baskerville", serif;
+      font-size: 1.8rem;
+      height: 5rem;
+      margin: 2rem;
+      outline: none;
+      width: 20rem;
+      &:active {
+        transform: translateY(0.2rem);
+      }
+      &:hover {
+        background-color: $color-primary;
+      }
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .cruise {
+    display: flex;
+    .main_section {
+      max-width: none;
+      width: 100%;
+    }
+    .cruise-img {
+      align-self: flex-end;
+      height: 25rem;
+      width: 35rem;
+    }
+  }
+}

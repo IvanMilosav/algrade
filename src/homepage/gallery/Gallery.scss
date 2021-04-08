@@ -1,0 +1,95 @@
+$color-primary: #c69963;
+$color-primary-dark: #b28451;
+$color-secondary: #101d2c;
+.gallery {
+  background-color: $color-secondary;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding: 2rem;
+  .titles {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  .title {
+    color: $color-primary-dark;
+    font-size: 4rem;
+    font-weight: 400;
+  }
+  .subtitle {
+    color: white;
+
+    font-size: 2rem;
+    font-weight: 400;
+  }
+  .gallery-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  .image-container {
+    height: 45rem;
+    width: 70rem;
+    border-radius: 0.2rem;
+    background-color: $color-secondary;
+  }
+  .image {
+    height: 45rem;
+    width: 70rem;
+    border-radius: 0.2rem;
+  }
+  .button {
+    height: 45rem;
+    width: 5rem;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    outline: none;
+    color: $color-primary-dark;
+    font-size: 4rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    -webkit-tap-highlight-color: transparent;
+    &:hover {
+      color: $color-primary;
+      font-size: 4.5rem;
+    }
+    &:active {
+      transform: translateY(-0.3rem);
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .gallery {
+    .image-container {
+      height: 30rem;
+      width: 45rem;
+      border-radius: 0.2rem;
+    }
+    .image {
+      height: 30rem;
+      width: 45rem;
+      border-radius: 0.2rem;
+    }
+    .button {
+      height: 30rem;
+      width: 5rem;
+    }
+  }
+}
+
+.my-node-enter {
+  opacity: 0;
+}
+.my-node-enter-active {
+  opacity: 1;
+  transition: opacity 200ms;
+}
+.my-node-exit {
+  opacity: 1;
+}
+.my-node-exit-active {
+  opacity: 0;
+  transition: opacity 200ms;
+}

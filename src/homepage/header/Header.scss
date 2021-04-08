@@ -1,0 +1,126 @@
+$color-primary: #c69963;
+$color-primary-dark: #b28451;
+$color-primary-darker: darken($color-primary, 20);
+$color-secondary: #101d2c;
+.header {
+  display: flex;
+  font-family: "Libre Baskerville", serif;
+  height: 52rem;
+  width: 100%;
+  .main_section {
+    align-items: flex-end;
+    background-image: linear-gradient(
+        rgba(#101d2c96, 0.9),
+        rgba(#101d2c80, 0.9)
+      ),
+      url(../../assets/dubai-wave-hotel.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    height: 100%;
+    padding: 2rem;
+    position: relative;
+    width: 80%;
+  }
+  .logo {
+    height: 14rem;
+    position: absolute;
+    right: 5rem;
+    top: 5rem;
+    width: 14rem;
+  }
+  .main_section-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 5rem;
+    margin-left: 15rem;
+    max-width: 80%;
+    position: relative;
+    .title {
+      color: $color-primary;
+      font-size: 6rem;
+    }
+    .line {
+      color: white;
+      font-size: 3rem;
+    }
+    .button {
+      background-color: $color-primary-dark;
+      border: none;
+      border-radius: 0.2rem;
+      color: white;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 1.8rem;
+      height: 5rem;
+      margin: 2rem 0;
+      outline: none;
+      width: 20rem;
+      &:active {
+        transform: translateY(0.2rem);
+      }
+      &:hover {
+        background-color: $color-primary;
+      }
+    }
+  }
+  .ceo_section {
+    background-color: #101d2c;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    padding: 2rem;
+    width: 30%;
+  }
+  .ceo_section-container {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    .ceo_img {
+      border-radius: 50%;
+      height: 17rem;
+      margin: 2rem;
+      width: 17rem;
+    }
+    .text {
+      color: white;
+      font-size: 1.6rem;
+      margin: 1rem;
+      text-align: center;
+    }
+    .name {
+      color: $color-primary;
+      font-size: 1.4rem;
+      text-align: center;
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .header {
+    .main_section-container {
+      margin-bottom: 2rem;
+      margin-left: 2rem;
+    }
+  }
+}
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    min-height: min-content;
+    .main_section {
+      width: 100%;
+    }
+    .logo {
+      right: 2rem;
+      top: 2rem;
+    }
+    .ceo_section {
+      display: none;
+    }
+  }
+}
